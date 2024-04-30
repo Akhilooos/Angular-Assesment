@@ -1,0 +1,11 @@
+<form (submit)="search()">
+    <input [(ngModel)]="searchText" name="searchText" placeholder="Search by country">
+    <button type="submit">Search</button>
+   </form>
+<h4>All Countries</h4>
+<div *ngFor="let country of countryData">
+ <h2>{{country.Country_Region}}</h2>
+ <p>RECOVERED : {{country.Recovered}}</p>
+ <p>DEATHS : {{country.Deaths}}</p>
+ <p>ACTIVE : {{country.Active}}</p>
+</div>
